@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vanilla-picker@2"></script>
+    <link rel="stylesheet" href="main.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Shopify Swatch Maker</a>
+          </div>
+        </nav>
+<div class="row d-flex justify-content-center">
+<form id="swatch-form" class="d-flex align-items-center flex-column
+">
+    <p>
+        <label for="angle">Diaganol</label>
+        <input type="checkbox" name="angle" id="angle" value="diaganol">
+    </p>
+    <div class="d-flex m-3">
+        <input class="picker" type="color" name="colour-picker" id="colour-one" value="#000000">
+        <input class="picker" type="color" name="colour-picker" id="colour-two" value="#000000">
+        <input class="picker" type="color" name="colour-picker" id="colour-three" value="#000000">
+    </div>
+    <button type="submit" id="swatch">Create Swatch</button>
+</form>
+    <div class="d-flex align-items-center flex-column m-3">
+        <canvas id="canvas" width="50px" height="50px"></canvas>
+    </div>
+</div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
