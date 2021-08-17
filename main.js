@@ -7,7 +7,7 @@ let colourTwo = "white";
 let colourThree = "green";
 
 
-function Colour(){
+function tripleColour(){
     console.log(document.getElementById('angle').checked)
     if (document.getElementById('angle').checked){
         var gradient = ctx.createLinearGradient(0,0,50,50);
@@ -18,7 +18,7 @@ function Colour(){
     // Add three color stops that start and stop at the same point to remove blend
 
     gradient.addColorStop(0, colourOne);
-    gradient.addColorStop(0.33, colourOne);
+    gradient.addColorStop(.33, colourOne);
     gradient.addColorStop(.33, colourTwo);
     gradient.addColorStop(.66, colourTwo);
     gradient.addColorStop(.66, colourThree);
@@ -29,17 +29,56 @@ function Colour(){
     ctx.fillRect(0, 0, 50, 50);
 }
 
+function doubleColour(){
+    console.log(document.getElementById('angle').checked)
+    if (document.getElementById('angle').checked){
+        var gradient = ctx.createLinearGradient(0,0,50,50);
+    }
+    else{
+        var gradient = ctx.createLinearGradient(0,0,50,0);
+    }
+    // Add three color stops that start and stop at the same point to remove blend
+
+    gradient.addColorStop(0, colourOne);
+    gradient.addColorStop(.5, colourOne);
+    gradient.addColorStop(.5, colourTwo);
+    gradient.addColorStop(1, colourTwo);
+
+    
+    // Set the fill style and draw a rectangle
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 50, 50);
+}
+
+function singleColour(){
+
+    ctx.fillStyle = colourOne;
+    ctx.fillRect(0, 0, 50, 50);
+
+}
+
 document.getElementById("swatch-form").onsubmit = (e)=>{
     e.preventDefault()
-    colourOne = document.getElementById('colour-one').value;
-    colourTwo = document.getElementById('colour-two').value;
-    colourThree = document.getElementById('colour-three').value;
-    Colour()
+
+    if(document.getElementById('colour-number').value==="3"){
+        colourOne = document.getElementById('colour-one').value;
+        colourTwo = document.getElementById('colour-two').value;
+        colourThree = document.getElementById('colour-three').value;
+        tripleColour()
+    }else if (document.getElementById('colour-number').value==="2"){
+        colourOne = document.getElementById('colour-one').value;
+        colourTwo = document.getElementById('colour-two').value;
+        doubleColour()
+    }else{
+        colourOne = document.getElementById('colour-one').value;
+        singleColour()
+    }
+
 }
 
 document.getElementById('png').addEventListener('click', (e)=>{
     Image()
     })
 
-window.onload = ()=>Colour()
+window.onload = ()=>colourThree()
 
