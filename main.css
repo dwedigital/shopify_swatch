@@ -1,3 +1,40 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  letter-spacing: 1.81px;
+  font-family: monospace;
+}
+
 .form-select {
-width:50%!important;
+  width: 50% !important;
+  text-transform: uppercase;
+  text-align-last: center;
+}
+select.form-select,
+select.form-select:focus {
+  border: none;
+  outline: 1px dotted black;
+}
+
+button {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  min-height: 50px;
+  text-transform: uppercase !important;
+
+  border-radius: 2px;
+  letter-spacing: 1.81px;
+  padding: 7px 10px;
+  transition: all 0.1s ease-in-out;
+  background: #fff;
+  color: #000;
+  box-shadow: 3px 4px 0 0 #000;
+  border: 1px solid #000;
+}
+
+button:hover {
+  border: 1px solid #000;
+  box-shadow: 5px 6px 0 0 #000;
+  left: 0;
+  top: 0;
 }

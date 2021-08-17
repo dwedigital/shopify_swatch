@@ -18,10 +18,10 @@ function tripleColour(){
     // Add three color stops that start and stop at the same point to remove blend
 
     gradient.addColorStop(0, colourOne);
-    gradient.addColorStop(.33, colourOne);
-    gradient.addColorStop(.33, colourTwo);
-    gradient.addColorStop(.66, colourTwo);
-    gradient.addColorStop(.66, colourThree);
+    gradient.addColorStop(.333, colourOne);
+    gradient.addColorStop(.333, colourTwo);
+    gradient.addColorStop(.666, colourTwo);
+    gradient.addColorStop(.666, colourThree);
     gradient.addColorStop(1, colourThree);
     
     // Set the fill style and draw a rectangle
