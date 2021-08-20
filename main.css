@@ -20,7 +20,7 @@ button {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
   min-height: 50px;
-  text-transform: uppercase !important;
+  text-transform: uppercase;
 
   border-radius: 2px;
   letter-spacing: 1.81px;
