@@ -73,12 +73,7 @@ document.getElementById("swatch-form").onsubmit = (e)=>{
         colourOne = document.getElementById('colour-one').value;
         singleColour()
     }
+    document.getElementById('alert').style.display ="block"
 
 }
-
-document.getElementById('png').addEventListener('click', (e)=>{
-    Image()
-    })
-
-window.onload = ()=>colourThree()
 

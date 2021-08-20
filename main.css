@@ -38,3 +38,8 @@ button:hover {
   left: 0;
   top: 0;
 }
+
+.alert{
+
+    display:none;
+}
