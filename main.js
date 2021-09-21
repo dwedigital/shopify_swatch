@@ -2,9 +2,9 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 
-let colourOne = "black";
-let colourTwo = "white";
-let colourThree = "green";
+let colourOne;
+let colourTwo;
+let colourThree;
 
 
 function tripleColour(){
