@@ -83,6 +83,7 @@ document.getElementById("colour-number").addEventListener('change',(e)=>{
         document.getElementById("angle").disabled=false;
     }else{
         document.getElementById("angle").disabled=true;
+        document.getElementById("angle").checked=false;
     }
 })
 
