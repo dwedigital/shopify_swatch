@@ -77,3 +77,12 @@ document.getElementById("swatch-form").onsubmit = (e)=>{
 
 }
 
+document.getElementById("colour-number").addEventListener('change',(e)=>{
+    if (e.target.value !=1){
+        console.log(e.target.value)
+        document.getElementById("angle").disabled=false;
+    }else{
+        document.getElementById("angle").disabled=true;
+    }
+})
+
